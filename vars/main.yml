@@ -14,10 +14,6 @@ authorized_keys:
     keyfile:            "{{ role_path }}/../../inventory/hosts/rudolph/users/rachel/files/ssh_keys/id_rsa.pub"
   - user:               'cryptkeeper'
     keyfile:            "{{ role_path }}/../../inventory/hosts/nixon/users/aaron/files/ssh_keys/id_rsa.pub"
-  - user:               'cryptkeeper'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/nixon/users/lucy/files/ssh_keys/id_rsa.pub"
-#  - user:               'cryptkeeper'
-#    keyfile:            "{{ role_path }}/../../inventory/hosts/no/users/tomas/files/ssh_keys/id_rsa.pub"
 system_users:
   - 'cryptkeeper'
 system_groups:
