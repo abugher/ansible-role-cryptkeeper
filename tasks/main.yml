@@ -1,6 +1,13 @@
 ---
 - include:              '../tasks/create_files.yml'
 - include:              '../tasks/authorized_keys.yml'
+- include:              '../tasks/authorized_keys.yml'
+  vars:
+    authorized_keys:
+      - user:               'cryptkeeper'
+        keyfile:            "../files/conf/homedirs/{{ item }}/common/.ssh/id_rsa.pub"
+  with_items:           "{{ usergroup_games }}"
 - include:              '../tasks/system_users.yml'
 - include:              '../tasks/system_groups.yml'
 - include:              '../tasks/allow_users.yml'
+
