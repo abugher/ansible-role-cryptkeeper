@@ -1,4 +1,10 @@
 ---
+system_groups:
+  - 'cryptkeeper'
+system_users:
+  - 'cryptkeeper'
+allow_users:
+  - 'cryptkeeper'
 create_files:
   - path:               '~cryptkeeper/bones'
     state:              'directory'
@@ -12,9 +18,3 @@ authorized_keys:
     keyfile:            "{{ role_path }}/../../inventory/hosts/rudolph/users/rachel/files/ssh_keys/id_rsa.pub"
   - user:               'cryptkeeper'
     keyfile:            "{{ role_path }}/../../inventory/hosts/peekaboo/users/dalton/files/ssh_keys/id_rsa.pub"
-system_users:
-  - 'cryptkeeper'
-system_groups:
-  - 'cryptkeeper'
-allow_users:
-  - 'cryptkeeper'
