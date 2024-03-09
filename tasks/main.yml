@@ -1,10 +1,10 @@
 ---
-- include:              '../tasks/system_groups.yml'
-- include:              '../tasks/system_users.yml'
-- include:              '../tasks/allow_users.yml'
-- include:              '../tasks/create_files.yml'
-- include:              '../tasks/authorized_keys.yml'
-- include:              '../tasks/authorized_keys.yml'
+- include_tasks:        '../tasks/system_groups.yml'
+- include_tasks:        '../tasks/system_users.yml'
+- include_tasks:        '../tasks/allow_users.yml'
+- include_tasks:        '../tasks/create_files.yml'
+- include_tasks:        '../tasks/authorized_keys.yml'
+- include_tasks:        '../tasks/authorized_keys.yml'
   vars:
     authorized_keys:
       - user:               'cryptkeeper'
