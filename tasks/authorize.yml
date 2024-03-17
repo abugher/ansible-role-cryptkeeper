@@ -1,0 +1,11 @@
+---
+- include_tasks:        '../tasks/authorized_keys.yml'
+  vars:
+    authorized_keys:
+      - user:           'cryptkeeper'
+        keyfile:        "../inventory/hosts/{{ nethack_host }}/users/{{ nethack_user }}/files/ssh_keys/id_rsa.pub"
+  with_items:           "{{ hostvars[nethack_host]['nethack_users'] }}"
+  loop_control:
+    loop_var:           'nethack_user'
+
+

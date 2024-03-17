@@ -4,9 +4,8 @@
 - include_tasks:        '../tasks/allow_users.yml'
 - include_tasks:        '../tasks/create_files.yml'
 - include_tasks:        '../tasks/authorized_keys.yml'
-- include_tasks:        '../tasks/authorized_keys.yml'
-  vars:
-    authorized_keys:
-      - user:               'cryptkeeper'
-        keyfile:            "../files/conf/homedirs/{{ item }}/common/.ssh/id_rsa.pub"
-  with_items:           "{{ usergroup_games }}"
+
+- include_tasks:        'authorize.yml'
+  with_items:           "{{ groups['nethack'] }}"
+  loop_control:
+    loop_var:           'nethack_host'
