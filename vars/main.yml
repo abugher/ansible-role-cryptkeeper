@@ -11,10 +11,3 @@ create_files:
     owner:              'cryptkeeper'
     group:              'cryptkeeper'
     mode:               '0755'
-authorized_keys:
-  - user:               'cryptkeeper'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/mawg/users/aaron/files/ssh_keys/id_rsa.pub"
-  - user:               'cryptkeeper'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/rudolph/users/rachel/files/ssh_keys/id_rsa.pub"
-  - user:               'cryptkeeper'
-    keyfile:            "{{ role_path }}/../../inventory/hosts/peekaboo/users/dalton/files/ssh_keys/id_rsa.pub"

@@ -3,8 +3,6 @@
 - include_tasks:        '../tasks/system_users.yml'
 - include_tasks:        '../tasks/allow_users.yml'
 - include_tasks:        '../tasks/create_files.yml'
-- include_tasks:        '../tasks/authorized_keys.yml'
-
 - include_tasks:        'authorize.yml'
   with_items:           "{{ groups['nethack'] }}"
   loop_control:
