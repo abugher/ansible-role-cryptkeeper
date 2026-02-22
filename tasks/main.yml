@@ -1,8 +1,8 @@
 ---
-- include_tasks:        '../tasks/system_groups.yml'
-- include_tasks:        '../tasks/system_users.yml'
-- include_tasks:        '../tasks/allow_users.yml'
-- include_tasks:        '../tasks/create_files.yml'
+- include_tasks:        'tasks/common/system_groups.yml'
+- include_tasks:        'tasks/common/system_users.yml'
+- include_tasks:        'tasks/common/allow_users.yml'
+- include_tasks:        'tasks/common/create_files.yml'
 - include_tasks:        'authorize.yml'
   with_items:           "{{ groups['nethack'] }}"
   loop_control:
